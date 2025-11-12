@@ -29,7 +29,7 @@ class RegistrationTest extends TestCase
 
         $response
             ->assertHasNoErrors()
-            ->assertRedirect(route('dashboard', absolute: false));
+            ->assertRedirect(route('grupoEconomico/listar', absolute: false));
 
         $this->assertAuthenticated();
     }
