@@ -5,10 +5,10 @@ Desenvolvido em Laravel 12 com MySQL, utilizando Livewire para frontend dinâmic
 
 # Requisitos
 
-PHP 8.1 ou superior
-Composer
-Node.js e npm
-Docker (para Laravel Sail)
+PHP 8.1 ou superior,
+Composer,
+Node.js e npm,
+Docker (para Laravel Sail),
 MySQL 
 
 # Instalação
@@ -61,5 +61,5 @@ Abra um terminal e rode:
 
 `./vendor/bin/sail artisan queue:work`
 
-12. Acessar aplicacao
+12. Acessar aplicação
 `localhost/login`
