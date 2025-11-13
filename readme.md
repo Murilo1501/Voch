@@ -5,7 +5,7 @@ Desenvolvido em Laravel 12 com MySQL, utilizando Livewire para frontend dinâmic
 
 # Requisitos
 
-PHP 8.1 ou superior,
+PHP 8.2 ou superior,
 Composer,
 Node.js e npm,
 Docker (para Laravel Sail),
