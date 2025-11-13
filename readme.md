@@ -14,14 +14,14 @@ MySQL
 # Instalação
 
 1. Clone o repositório
-`git clone https://github.com/seu-usuario/seu-repositorio.git`
+`git clone https://github.com/Murilo1501/Voch.git`
 
-2. Instale as dependências PHP via Composer
-`composer install`
-3. Instale as dependências JS via npm
-`npm install`
+2. Acesse o diretório
+`cd diretorio  `
+3. Copiar arquivo .env.example
+`cp .env.example .env`
 
-4. Configure o arquivo .env
+4. Configure as variáveis do banco de dados no arquivo .env
 
 Configure as variáveis do banco MySQL
 ```
@@ -29,32 +29,37 @@ DB_CONNECTION=mysql
 DB_HOST=mysql
 DB_PORT=3306
 DB_DATABASE=nome_do_banco
-DB_USERNAME=usuario
-DB_PASSWORD=senha
+DB_USERNAME=usuario/root
+DB_PASSWORD=senha/vazio
 ```
-5. Laravel Sail (Docker):
+5. Instalar pacotes via composer:
+   `composer install `
 
-6. Inicialize o ambiente
+6. Instalar pacotes javaScript:
+   `npm install`
+
+7. Inicialize o ambiente 
 
 `./vendor/bin/sail up -d `
 
-7. Execute as migrations 
+8. Gerar chave da aplicacao 
+`./vendor/bin/sail artisan key:generate`
+
+
+9. Gerar estrutura do banco de dados 
 
 `./vendor/bin/sail artisan migrate `
 
-8. Compile os assets (Tailwind CSS, JS)
+10. Compile os assets (Tailwind CSS, JS)
 Abra um terminal e rode:
 
 `npm run dev`
 
-9.Configure o arquivo .env para a conexao das filas de job
+11.Rodar filas de jobs 
 
-`QUEUE_CONNECTION=database`
-
-10.abra um terminal e rode a fila de jobs 
+`./vendor/bin/sail artisan storage:link`
 
 `./vendor/bin/sail artisan queue:work`
 
-11. abre um terminal e conecte a pasta storage com a pasta com a pasta public
-
-`./vendor/bin/sail artisan storage:link`
+12. Acessar aplicacao
+`localhost/login`
